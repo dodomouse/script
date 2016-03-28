@@ -56,17 +56,15 @@ function Create()
 	echo "baseurl=file://$1" >> local.repo
 	echo 'gpgcheck=0' >> local.repo
 	echo 'enabled=1' >> local.repo
-	#cp $ORIG_DIR/local.repo /etc/yum.repos.d/ > /dev/null
-
 
 	#check if createrepo is existed
 	which createrepo > /dev/null
 	if [ $? -eq 1 ]
 	then
-		rpm -ivh createrepo-0.9.9-22.el6.noarch.rpm > dev/null
+		rpm -ivh createrepo-0.9.9-22.el6.noarch.rpm > /dev/null
 		if [ $? -ne 0 ]
 		then
-			echo ' install createrepo failed '
+			echo 'install createrepo failed and maybe you should install deltarpm or python-deltarpm in the folder firstly'
 			exit 1
 		fi
 	fi
