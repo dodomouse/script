@@ -44,7 +44,7 @@ function ReadVersion
 	else
 		FILENAME=`echo ${BASENAME%.*}`  #获取文件名
 		VERSION=`echo $BASENAME|gawk -F . '{print $NF}'`  #获取后缀名
-		if [ $VERSION -gt 0 ]
+		if [ $VERSION -gt 0 ] #此处确定是数字型的后缀，认为是版本号。可以根据实际修改规则
 		then
 			echo "$DIR        $FILENAME        $VERSION" >> $OUTPUT_FILE
 		else
