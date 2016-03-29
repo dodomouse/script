@@ -13,3 +13,11 @@ This script just help my maintenance colleagues to set a local yum source quickl
 Usage:
 config a local source: ./configYum.sh /home/Packages
 rollback: ./configYum.sh b
+
+
+GetFileVersion:
+This script will go loop of one folder to get the file version.
+Usage:
+sh getVersion.sh /home/mouse
+Then it will put split all files' path, file name and version into one file.
+Detailed info refer to the script :)
