@@ -21,3 +21,7 @@ Usage:
 sh getVersion.sh /home/mouse
 Then it will put split all files' path, file name and version into one file.
 Detailed info refer to the script :)
+
+optimize_ssh:
+This script is a python tool to optimize ssh. It just to replace some config in /etc/ssh folder. 
+You can run it by "python optimize_ssh.py"
